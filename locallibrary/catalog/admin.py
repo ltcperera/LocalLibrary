@@ -8,6 +8,7 @@ class AuthorAdmin(admin.ModelAdmin):
 
 class BookAdmin(admin.ModelAdmin):
     list_display = ('title', 'author', 'display_genre')
+    inlines = [BooksInstanceInline]
 
 class BookInstanceAdmin(admin.ModelAdmin):
     list_filter = ('status', 'due_back')
